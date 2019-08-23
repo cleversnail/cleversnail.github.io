@@ -79,16 +79,17 @@
 
 
 
-<meta name="description" content="蜗牛的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="蜗牛的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="相同浏览器只允许登录一个账号的需求相信是很多前端小伙伴的面临过或者将要面临的问题，看似没有什么大问题的问题，其实有点东西的。。。。这里介绍一下我尝试多种办法之后得出的一个最优的解决办法 ###1.情况一，当窗口一登录了admin账号，再去复制项目里面的地址用窗口二打开注意这里是项目里面的地址，有点东西的地方在于登录地址，下面再介绍，且看：窗口二打开任意一个项目里面的地址我们要的效果都是可以直接访问">
+<meta property="og:type" content="article">
+<meta property="og:title" content="（vue单页）同一浏览器只允许登录一个账号的解决办法">
+<meta property="og:url" content="http://yoursite.com/2018/12/28/vue/index.html">
 <meta property="og:site_name" content="蜗牛的博客">
-<meta property="og:description" content="蜗牛的博客">
+<meta property="og:description" content="相同浏览器只允许登录一个账号的需求相信是很多前端小伙伴的面临过或者将要面临的问题，看似没有什么大问题的问题，其实有点东西的。。。。这里介绍一下我尝试多种办法之后得出的一个最优的解决办法 ###1.情况一，当窗口一登录了admin账号，再去复制项目里面的地址用窗口二打开注意这里是项目里面的地址，有点东西的地方在于登录地址，下面再介绍，且看：窗口二打开任意一个项目里面的地址我们要的效果都是可以直接访问">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-23T07:34:29.464Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="蜗牛的博客">
-<meta name="twitter:description" content="蜗牛的博客">
+<meta name="twitter:title" content="（vue单页）同一浏览器只允许登录一个账号的解决办法">
+<meta name="twitter:description" content="相同浏览器只允许登录一个账号的需求相信是很多前端小伙伴的面临过或者将要面临的问题，看似没有什么大问题的问题，其实有点东西的。。。。这里介绍一下我尝试多种办法之后得出的一个最优的解决办法 ###1.情况一，当窗口一登录了admin账号，再去复制项目里面的地址用窗口二打开注意这里是项目里面的地址，有点东西的地方在于登录地址，下面再介绍，且看：窗口二打开任意一个项目里面的地址我们要的效果都是可以直接访问">
 
 
 
@@ -118,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/28/vue/">
 
 
 
 
 
-  <title>蜗牛的博客</title>
+  <title>（vue单页）同一浏览器只允许登录一个账号的解决办法 | 蜗牛的博客</title>
   
 
 
@@ -143,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -237,9 +237,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -269,9 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/28/vue/" itemprop="url">（vue单页）同一浏览器只允许登录一个账号的解决办法</a></h1>
+          <h1 class="post-title" itemprop="name headline">（vue单页）同一浏览器只允许登录一个账号的解决办法</h1>
         
 
         <div class="post-meta">
@@ -321,9 +319,7 @@
       
 
       
-        
-          
-            <p>相同浏览器只允许登录一个账号的需求相信是很多前端小伙伴的面临过或者将要面临的问题，看似没有什么大问题的问题，其实有点东西的。。。。这里介绍一下我尝试多种办法之后得出的一个最优的解决办法</p>
+        <p>相同浏览器只允许登录一个账号的需求相信是很多前端小伙伴的面临过或者将要面临的问题，看似没有什么大问题的问题，其实有点东西的。。。。这里介绍一下我尝试多种办法之后得出的一个最优的解决办法</p>
 <p>###1.情况一，当窗口一登录了admin账号，再去复制项目里面的地址用窗口二打开<br>注意这里是<strong><code>项目里面</code></strong>的地址，有点东西的地方在于登录地址，下面再介绍，且看：<br>窗口二打开任意一个项目里面的地址我们要的效果都是可以直接访问的（各大bat的产品也是这样的效果，毋庸置疑）。那么我们是怎么做到当窗口一登录了之后，其他窗口可以访问项目里面的任意地址，而当没有窗口登录，复制项目里面的地址不能访问（安全问题）让其跳转到登录页<br>上代码：我们在main.js里面</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">router.beforeEach((to,from,next) =&gt; &#123; //这里是在所有路由跳转之前都会去执行以下操作</span><br><span class="line">  if(to.path == &apos;/&apos;)&#123; //如果要去的是登录页</span><br><span class="line">    next() //那么随意，去就是了</span><br><span class="line">  &#125; else &#123; //如果不是</span><br><span class="line">    if(localStorage.getItem(&apos;isLogin&apos;))&#123; //判断当前浏览器的本地存储里面是不是有已经登录的信息</span><br><span class="line">      next() //有的话，ok，去你想去的地址</span><br><span class="line">    &#125; else &#123; //没有的话，也就是没有登录</span><br><span class="line">      next(&#123;path:&apos;/&apos;&#125;) //去登录页</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
@@ -349,8 +345,6 @@
 <p>好了，在第二个窗口登录另一个账号，返回第一个窗口的时候，改窗口登了的账号被挤掉，整个页面同步到第二个窗口所登录的账号信息，这个效果实现了！！！代码倒是没有什么很高深的要写，只是思路很重要，有点曲折，实现完功能发现，头发又掉了好几根。。。。。。</p>
 <p>&lt;每次写东西过程中感觉都写很多废话，但是这些废话不写吧，又怕表达不清楚，更怕一段时间之后自己看自己的文章都看不懂，允悲！&gt;</p>
 
-          
-        
       
     </div>
     
@@ -367,12 +361,12 @@
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -382,10 +376,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -393,6 +388,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -626,6 +625,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
